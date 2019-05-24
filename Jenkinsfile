@@ -1,9 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('') {
-      steps {
-        sh 'java version '
+    stage('error') {
+      parallel {
+        stage('error') {
+          steps {
+            sh '''println("Hello World")
+'''
+          }
+        }
+        stage('') {
+          steps {
+            sh 'println("Good Day")'
+          }
+        }
       }
     }
   }

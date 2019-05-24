@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Email') {
       steps {
-        mail(subject: 'Success', body: 'SUCCESS!', to: 'deanveizaj@gmail.com')
+        mail(subject: 'Success', body: 'SUCCESS!', to: 'deanveizaj@gmail.com', from: 'deanveizaj@gmail.com')
       }
     }
   }
